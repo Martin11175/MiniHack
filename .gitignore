@@ -1,1 +1,7 @@
+# Standard output files
 output.txt
+
+# Editor temporary files
+*~
+*.swp
+*.swo
