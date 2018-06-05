@@ -6,7 +6,7 @@ This time the problem is.... Maze Solving! We will provide you with an input fil
 
 You will have access to both simple mazes to ensure your solutions are correct, and complex ones to perfect your exploration code! In terms of milestones everyone should aim to be able to solve the simple input file, which will consist of two small mazes, one of which has a single path to being correct, and the other without a valid path. Once you have achieved this, try your solution on the larger file, as they will be more challenging to solve.
 
-As the 'challenge' aspect of this event, we're going to attempt to optimise for speed. If you want your solution evaluated, please submit it up to this folder, noting the execution command (and compilation if applicable) in a comment at the top of your solution file and we'll execute it on a Linux environment using `time` to measure the user execution time.
+As the 'challenge' aspect of this event, we're going to attempt to optimise for speed. If you want your solution evaluated, please submit it up to the solutions sub-folder, noting the execution command (and compilation if applicable) in a comment at the top of your solution file and we'll execute it on a Linux environment using `time` to measure the user execution time.
 
 To make it more interesting, we're also going to stipulate that your program should be single-threaded! No parallelism allowed! As the way this exercise is constructed could easily be broken down into lots of chunks for easy speed gains, we instead want you to think about your algorithmic approach to tackling this problem.
 
