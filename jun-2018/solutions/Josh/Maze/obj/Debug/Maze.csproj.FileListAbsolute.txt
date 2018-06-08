@@ -1,0 +1,9 @@
+C:\Users\Josh\Documents\Inductosense-Desktop\Installer\Maze\Maze\bin\Debug\Maze.exe.config
+C:\Users\Josh\Documents\Inductosense-Desktop\Installer\Maze\Maze\bin\Debug\Maze.exe
+C:\Users\Josh\Documents\Inductosense-Desktop\Installer\Maze\Maze\bin\Debug\Maze.pdb
+C:\Users\Josh\Documents\Inductosense-Desktop\Installer\Maze\Maze\obj\Debug\Maze.csprojResolveAssemblyReference.cache
+C:\Users\Josh\Documents\Inductosense-Desktop\Installer\Maze\Maze\obj\Debug\Maze.exe
+C:\Users\Josh\Documents\Inductosense-Desktop\Installer\Maze\Maze\obj\Debug\Maze.pdb
+C:\Users\Josh\Documents\MiniHack2\jun-2018\solutions\Josh\Maze\bin\Debug\Maze.exe.config
+C:\Users\Josh\Documents\MiniHack2\jun-2018\solutions\Josh\Maze\obj\Debug\Maze.exe
+C:\Users\Josh\Documents\MiniHack2\jun-2018\solutions\Josh\Maze\obj\Debug\Maze.pdb
