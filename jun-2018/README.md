@@ -72,3 +72,4 @@ For output, you should create a single `.txt` file called `output.txt`, with eac
 ## Results
 | Name            | Execution time (ms) | Language      |
 | --------------- | ------------------- | ------------- |
+| Jonathan Gilchrist | 198 ms | Rust |
