@@ -10,7 +10,6 @@ namespace Maze
     class Program
     {
         const string path = "C:\\Users\\Josh\\Documents\\MiniHack\\jun-2018";
-        static bool?[,] maze_mem;
         static bool[,] maze_visited;
 
         static void Main(string[] args)
@@ -25,7 +24,6 @@ namespace Maze
             foreach (int[,] maze in mazes)
             {
                 int n = maze.GetLength(0);
-                maze_mem = new bool?[n, n];
                 maze_visited = new bool[n, n];
 
                 bool answer = isSolution(maze, 0, 1, n);
@@ -93,22 +91,17 @@ namespace Maze
         {
             // Check out of bounds
             if (i >= n || i < 0 || j >= n || j < 0) return false;
-            // Check if visited before
-            if (maze_visited[i, j] == true) return false;
-            // Check if solved before
-            if (maze_mem[i, j] != null) return (bool)maze_mem[i, j];
+            // Mark visited
+            if (maze_visited[i, j]) return false;
             // Check if a wall has been hit
-            else if (maze[i, j] == 1) maze_mem[i, j] = false;
+            else if (maze[i, j] == 1) return false;
             // Check if end has been reached
-            else if (i == (n - 1) && j == (n - 2)) maze_mem[i, j] = true;
+            else if (i == (n - 1) && j == (n - 2)) return true;
             // Else check other dimension
-            else
-            {
-                maze_visited[i, j] = true;
-                maze_mem[i, j] = isSolution(maze, i + 1, j, n) || isSolution(maze, i, j + 1, n)
-                    || isSolution(maze, i - 1, j, n) || isSolution(maze, i, j - 1, n);
-            }
-            return (bool)maze_mem[i, j];
+            maze_visited[i, j] = true;
+            return isSolution(maze, i + 1, j, n) || isSolution(maze, i, j + 1, n)
+                || isSolution(maze, i - 1, j, n) || isSolution(maze, i, j - 1, n);
+
         }
     }
 }
