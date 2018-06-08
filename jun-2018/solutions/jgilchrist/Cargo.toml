@@ -1,0 +1,8 @@
+[package]
+authors = ["Jonathan Gilchrist <jonathan.gilchrist@factset.com>"]
+name = "jun-2018"
+version = "0.1.0"
+
+[dependencies]
+itertools = "0.7.8"
+petgraph = "0.4.12"
