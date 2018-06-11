@@ -38,11 +38,6 @@ fn check_solvable(rows: &Vec<Vec<bool>>) -> bool {
         .cartesian_product(0..size)
         .collect();
 
-    let open_nodes: Vec<&Coord> = all_nodes
-        .iter()
-        .filter(|n| is_open_space(rows, n))
-        .collect();
-
     let mut graph = Graph::<i32, (), Undirected>::new_undirected();
 
     let mut start_node_option: Option<NodeIndex<u32>> = None;
@@ -61,7 +56,9 @@ fn check_solvable(rows: &Vec<Vec<bool>>) -> bool {
         }
     }
 
-    for node in &open_nodes {
+    for node in &all_nodes {
+        if !is_open_space(rows, node) { continue; }
+
         let neighbors_coords = vec![
             (node.0-1, node.1),
             (node.0+1, node.1),
@@ -69,12 +66,9 @@ fn check_solvable(rows: &Vec<Vec<bool>>) -> bool {
             (node.0,   node.1+1)
         ];
 
-        let neighbors: Vec<&Coord> = neighbors_coords
-            .iter()
-            .filter(|n| is_valid_coord(n, size))
-            .collect();
+        for neighbor in &neighbors_coords {
+            if !is_valid_coord(neighbor, size) { continue; }
 
-        for neighbor in neighbors {
             if is_open_space(rows, neighbor) {
                 graph.add_edge(
                     node_index(convert_to_node_index(node, size) as usize),
